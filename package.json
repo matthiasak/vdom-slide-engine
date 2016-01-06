@@ -1,6 +1,6 @@
 {
   "name": "vdom-slide-engine",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": "Matthew Keas (@matthiasak)",
   "license": "MIT",
   "main": "dist/index.js",
