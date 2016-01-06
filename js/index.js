@@ -144,7 +144,7 @@ const engine = () => {
         ])
     }
 
-    const render = (...args) => {
+    const play = (...args) => {
         initEvents()
         mount(view, qs(...args))
     }

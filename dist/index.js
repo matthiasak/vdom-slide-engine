@@ -158,7 +158,7 @@ var engine = function engine() {
         return (0, _universalUtils.m)('html', { config: config }, [(0, _universalUtils.m)('head', [(0, _universalUtils.m)('title', 'slide: ' + active()), (0, _universalUtils.m)('meta', { name: 'viewport', content: "width=device-width, initial-scale=1.0" }), (0, _universalUtils.m)('link', { href: './style.css', type: 'text/css', rel: 'stylesheet' })]), (0, _universalUtils.m)('body', [(0, _universalUtils.m)('.slides', _slide), arrows()])]);
     };
 
-    var render = function render() {
+    var play = function play() {
         initEvents();
         (0, _universalUtils.mount)(view, _universalUtils.qs.apply(undefined, arguments));
     };
