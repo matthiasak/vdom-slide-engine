@@ -125,11 +125,11 @@ const engine = () => {
     const view = () => {
         let a = active(),
             s = slides(),
-            sel = (active() < prev() && 'from-left') ||
-                (active() > prev() && 'from-right') ||
+            sel = (active() < prev() && '.from-left') ||
+                (active() > prev() && '.from-right') ||
                 ''
 
-        let _slide =  m('div', {key:a, className: sel}, s[a])
+        let _slide =  s[a] ? m(`div${sel}`) : ''
 
         return m('html', {config}, [
             m('head', [
@@ -144,9 +144,9 @@ const engine = () => {
         ])
     }
 
-    const play = (...args) => {
+    const play = () => {
         initEvents()
-        mount(view, qs(...args))
+        mount(view, document.querySelector('html'))
     }
 
     return { slides, insert, remove, navigate, play }

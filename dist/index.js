@@ -151,16 +151,16 @@ var engine = function engine() {
     var view = function view() {
         var a = active(),
             s = slides(),
-            sel = active() < prev() && 'from-left' || active() > prev() && 'from-right' || '';
+            sel = active() < prev() && '.from-left' || active() > prev() && '.from-right' || '';
 
-        var _slide = (0, _universalUtils.m)('div', { key: a, className: sel }, s[a]);
+        var _slide = s[a] ? (0, _universalUtils.m)('div' + sel) : '';
 
         return (0, _universalUtils.m)('html', { config: config }, [(0, _universalUtils.m)('head', [(0, _universalUtils.m)('title', 'slide: ' + active()), (0, _universalUtils.m)('meta', { name: 'viewport', content: "width=device-width, initial-scale=1.0" }), (0, _universalUtils.m)('link', { href: './style.css', type: 'text/css', rel: 'stylesheet' })]), (0, _universalUtils.m)('body', [(0, _universalUtils.m)('.slides', _slide), arrows()])]);
     };
 
     var play = function play() {
         initEvents();
-        (0, _universalUtils.mount)(view, _universalUtils.qs.apply(undefined, arguments));
+        (0, _universalUtils.mount)(view, document.querySelector('html'));
     };
 
     return { slides: slides, insert: insert, remove: remove, navigate: navigate, play: play };
