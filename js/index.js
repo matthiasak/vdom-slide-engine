@@ -129,7 +129,7 @@ const engine = () => {
                 (active() > prev() && '.from-right') ||
                 ''
 
-        let _slide =  s[a] ? m(`div${sel}`) : ''
+        let _slide =  s[a] ? m(`div${sel}`, s[a]) : ''
 
         return m('html', {config}, [
             m('head', [
