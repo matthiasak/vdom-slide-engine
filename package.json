@@ -1,6 +1,6 @@
 {
   "name": "vdom-slide-engine",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Matthew Keas (@matthiasak)",
   "license": "MIT",
   "main": "dist/index.js",
@@ -20,11 +20,9 @@
     "squash_msg": "'squashing commits down to 1 commit'"
   },
   "scripts": {
-    "watch": "babel js --watch --out-dir ./dist",
-    "deploy": "babel js --out-dir ./dist",
-    "build": "babel js --out-dir dist",
+    "watch": "babel js --out-dir dist -w;",
     "deploy": "npm run build; git add --all .; git commit -am 'new build'; npm version patch; git push origin HEAD; npm publish;",
-    "watch": "babel js --out-dir dist -w;"
+    "build": "babel js --out-dir dist"
   },
   "dependencies": {
     "babel-cli": "^6.2.0",
