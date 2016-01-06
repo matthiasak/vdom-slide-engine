@@ -160,7 +160,7 @@ var engine = function engine() {
 
     var play = function play() {
         initEvents();
-        (0, _universalUtils.mount)(view, document.querySelector('html'));
+        (0, _universalUtils.mount)(view, document);
     };
 
     return { slides: slides, insert: insert, remove: remove, navigate: navigate, play: play };

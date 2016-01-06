@@ -146,7 +146,7 @@ const engine = () => {
 
     const play = () => {
         initEvents()
-        mount(view, document.querySelector('html'))
+        mount(view, document)
     }
 
     return { slides, insert, remove, navigate, play }
